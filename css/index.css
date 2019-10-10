@@ -7,6 +7,17 @@
   font-size: 1.9rem;
   border-radius: 20px;
 }
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -211,7 +222,7 @@ nav a {
   display: flex;
   border-bottom: 2px dashed #b3b3b3;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   padding: 3vh 15vw 2vh 15vw;
 }
 @media (max-width:600px) {
@@ -221,6 +232,10 @@ nav a {
 }
 .home header h1 {
   padding: 10px;
+  animation-name: grow;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
 }
 @media (max-width:600px) {
   .home header h1 {
@@ -229,22 +244,22 @@ nav a {
 }
 .home .header-img {
   margin: auto;
-  width: 85vw;
+  width: 85%;
   max-width: 800px;
 }
 .home .top-welcome {
   border-bottom: 2px dashed #b3b3b3;
   margin: 20px auto;
-  width: 85vw;
-  padding-bottom: 2vh;
+  width: 85%;
+  padding-bottom: 2%;
   max-width: 800px;
 }
 .home .content-section {
-  margin: 30px 0px 60px 0px;
+  margin: 30px auto 60px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 85vw;
+  width: 85%;
   max-width: 800px;
 }
 @media (max-width:600px) {
@@ -311,18 +326,17 @@ nav a {
   max-width: 800px;
 }
 .home .content-pick {
-  margin-top: 80px;
+  margin: 0px auto;
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 80%;
   max-width: 800px;
 }
 @media (max-width:600px) {
   .home .content-pick {
     flex-direction: column;
-    margin: 0px auto;
   }
 }
 .home .content-pick .destination {
@@ -338,10 +352,10 @@ nav a {
 }
 .home .content-pick .destination h4 {
   text-align: left;
-  margin-left: 2vw;
+  margin-left: 2%;
 }
 .home .content-pick .destination p {
   text-align: left;
-  margin-left: 2vw;
+  margin-left: 2%;
   font-size: 1.6rem;
 }
