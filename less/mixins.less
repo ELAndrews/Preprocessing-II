@@ -1,1 +1,19 @@
 // Mixins in here
+@import 'global.less';
+
+.buttons(@backColor, @color, @fSize, @corners){
+    margin: 10px;
+    padding: 15px 50px;
+    text-align: center;
+    background-color: @backColor;
+    color: @color;
+    font-size: @fSize;
+    border-radius: @corners;
+}
+
+
+// 
+
+.btn {
+    .buttons(rgb(33, 110, 109), white, 1.9rem, 20px);
+  }
