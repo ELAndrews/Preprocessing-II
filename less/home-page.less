@@ -88,7 +88,7 @@
 
   .content-destination {
     width: 75%;
-    margin: 0 auto 30px;
+    margin: 30px auto;
 
     img {
       border-radius: 10px;
@@ -99,6 +99,7 @@
   }
 
   .content-pick {
+    margin-top: 80px;
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
@@ -106,10 +107,25 @@
     width: 80vw;
     max-width: 800px;
 
+    @media @mobile {
+      flex-direction: column;
+      margin: 0px auto;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
       text-align: center;
+
+      @media @mobile {
+        width: 90%;
+        margin: 20 auto;
+      }
+
+      h4 {
+        text-align: left;
+        margin-left: 2vw;
+      }
 
       p{
         text-align: left;
